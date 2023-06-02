@@ -1,0 +1,721 @@
+/*=================================Tap Menu ==============================*/
+:root {
+  --color-primary: #2F91C9;
+  --color-black: #404040;
+  --color-shadow: #cce6ff;
+  --color-black-1: #212b38;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:Times New Roman;
+}
+
+}
+.logo {
+  color: var(--color-black);
+  font-size: 25px;
+}
+
+.logo span {
+  color: var(--color-primary);
+}
+
+.menu-bar {
+  background-color: var(--color-shadow);
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  position:fixed;
+  z-index: 3;
+ }
+
+.menu-bar ul {
+  list-style: none;
+  display: flex;
+}
+
+.menu-bar ul li {
+  padding: 10px 20px;
+  position:relative;
+}
+
+.menu-bar ul li a {
+  font-size: 12px;
+  color: var(--color-black);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.menu-bar ul li a:hover {
+  color: var(--color-primary);
+  border-width: 12px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: var(--color-shadow);
+}
+
+.fas {
+  float: right;
+  margin-left: 5px;
+  padding-top: 5px;
+}
+  
+
+.dropdown-menu {
+  display: none;
+}
+
+.dropdown-menu ul li::after {
+    content: '';
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    transition: width .5s;
+}
+
+.dropdown-menu ul li a:hover {
+    color: rgb(255, 165, 0);
+}
+
+.dropdown-menu ul li:hover::after {
+    width: 100%;
+    background-color:rgb(255, 165, 0);
+}
+
+.menu-bar ul li:hover .dropdown-menu {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: var(--color-shadow);
+}
+
+.menu-bar ul li:hover .dropdown-menu ul {
+  display: block;
+  margin: 10px;
+}
+
+.menu-bar ul li:hover .dropdown-menu ul li {
+  width: 160px;
+  padding: 10px;
+}
+
+.dropdown-menu-1 {
+  display: none;
+}
+
+.dropdown-menu ul li:hover .dropdown-menu-1 {
+  display: block;
+  position: absolute;
+  left: 150px;
+  top: 0;
+  background-color: var(--color-shadow);
+}
+
+.hero {
+  height: calc(100vh - 80px);
+  background-image: url(./bg.jpg);
+  background-position: center;
+}
+/*==============================Tap menu End ================*/
+/*==============================Sosial media ================*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+.sosialmedia{
+  display: flex;
+  position: relative;
+  top: 90px;
+  left: 60px;
+  width: 18%;
+  height: 5%;
+  border-radius: 20px;
+  background: transparent;
+  font-family:Times New Roman ;
+  z-index: 2;
+}
+
+.wrapper .button{
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  float: left;
+  margin: 0 5px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-out;
+  margin-left: 10;
+  
+}
+.wrapper .button:hover{
+  width: 100px;
+}
+.wrapper .button .icon{
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  border-radius: 25px;
+  box-sizing: border-box;
+  line-height: 30px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:nth-child(1):hover .icon{
+  background: #4267B2;
+}
+.wrapper .button:nth-child(2):hover .icon{
+  background: #1DA1F2;
+}
+.wrapper .button:nth-child(3):hover .icon{
+  background: #E1306C;
+}
+.wrapper .button:nth-child(4):hover .icon{
+  background: #ff0000;
+}
+
+.wrapper .button .icon i{
+  font-size: 12px;
+  line-height: 30px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover .icon i{
+  color: #fff;
+}
+.wrapper .button span{
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 30px;
+  margin-left: 10px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:nth-child(1) span{
+  color: #4267B2;
+}
+.wrapper .button:nth-child(2) span{
+  color: #1DA1F2;
+}
+.wrapper .button:nth-child(3) span{
+  color: #E1306C;
+}
+.wrapper .button:nth-child(4) span{
+  color:#ff0000;
+}
+/*==========================Sosial Media End==================*/
+/*==========================Searching Mesin===================*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+::selection{
+  color:var(--color-primary);
+}
+
+.search-box{
+  position: fixed;
+  top: 3px;
+  left: 250px;
+  height: 30px;
+  width: 30px;
+  border-radius: 25px;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: 4;
+}
+.search-box.active{
+  width: 350px;
+}
+.search-box input{
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  padding: 0 30px 0 10px;
+  font-size: 12px;
+  font-family: Times New Roman;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.search-box input.active{
+  opacity: 1;
+}
+.search-box input::placeholder{
+  color:var(--color-shadow);
+}
+.search-box .search-icon{
+  position: absolute;
+  top: 15px;
+  transform: translateY(-50%);
+  height: 30px;
+  width: 30px;
+  background:var(--color-shadow);
+  border-radius: 25px;
+  text-align: center;
+  line-height: 10px;
+  font-size: 18px;
+  color:var(--color-black);
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.search-box .search-icon.active{
+  right: 5px;
+  height: 30px;
+  line-height: 50px;
+  width: 30px;
+  font-size: 18px;
+  background: #fff;
+  color: #fff;
+  transform: translateY(-50%) rotate(360deg);
+}
+.search-box .cancel-icon{
+  position: absolute;
+  left: 3px;
+  top: 15px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #808080;
+  cursor: pointer;
+  transition: all 0.5s 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.search-box .cancel-icon.active{
+  right: -35px;
+  transform: translateY(-50%) rotate(360deg);
+}
+.search-box .search-data{
+  text-align: center;
+  padding-top: 7px;
+  color: var(--color-primary);
+  font-size: 18px;
+  word-wrap: break-word;
+}
+.search-box .search-data.active{
+  display: none;
+}
+/*=====================Searching Mesin End======================*/
+/*======================== Slide Image============================ */
+
+.container-1 {
+    position: relative;
+    bottom: 250px;
+    background-color:var(--color-shadow);
+    padding: 100px 0 0 0;
+}
+
+.content-slide {
+    max-width: 1500px;
+    position: relative;
+    margin: auto;
+}
+
+.imgslide {
+    display: none;
+}
+
+img {
+    vertical-align: middle;
+    width:100%;height: 500px;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 12px;
+    color: rgb(255, 254, 224);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.8); 
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.pre:hover,
+.next:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: rgb(0, 0, 0);
+}
+
+.text {
+    color: #fafafa;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.content-slide .numberslide {
+    color: #ffffff;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+
+@media screen and (max-width: 800px) {
+
+    .content-slide {
+        padding: 8px 50px 12px 50px;
+    }
+
+    .next {
+        right: 50px;
+        border-radius: 3px 0 0 3px;
+    }
+    
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4;
+    }    
+    to {
+        opacity: 1;
+    }
+}
+
+.container .page {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.page .dot {
+    position: relative;
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    left: 48.35%;
+    margin: 0 2px;
+    background-color: #bbb;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    border-radius: 50%;
+
+}
+
+.page .active,
+.page .dot:hover {
+    background-color:var(--color-black);
+}
+/*=========================================Slide Image End============================*/
+/*============================ Recruiter List Start=========================*/ 
+.width-list {
+  position: relative;
+  bottom: 250px;
+}
+
+.container-list{
+    background-color:#f0f8ff;
+}
+
+.recruiter-head-style{
+    text-align: center;
+     font-size: 15px;
+     color: #4b4848;
+     margin-bottom: 5px;
+}
+ .recruiter-marquee{
+     height: 105px;
+}
+ .recruiter-marquee img{
+     height:70px;
+     width:130px;
+     margin-left: 50px;
+}
+/*==================================Recruiter List End================================*/
+/*=============================== categories Satuan ====================*/
+.container {
+  width: var(--color-primary);
+  margin: auto;
+  position: relative;
+  bottom: 200px;
+
+}
+section {
+  padding: 6rem 0;
+}
+.btn {
+  position: absolute;
+  display: inline-block;
+  background: var(--color-primary);
+  color:var(--color-black) ;
+  padding: 1rem 2rem;
+  border: 1px solid transparent;
+  font-weight: 500;
+  transition: var(--color-primary);
+  top: 300px;
+  left: 80px;
+  text-decoration: none;
+}
+.btn:hover {
+  background:transparent;
+  color: var(--color-black);
+  border-color: var(--color-primary);
+}
+.btn-primary {
+  background: var(--color-black);
+  color: white;
+
+}
+.categories {
+  position: relative;
+  bottom: 250px;
+  background: var(--color-shadow);
+  height: 22rem;
+}
+.categories h2 {
+  position: absolute;
+  top: 140px;
+  left: 80px;
+  line-height: 1;
+  margin-bottom: 3rem;
+}
+.categories_container {
+  display: grid;
+  gap: 4rem;
+}
+
+.categories_left h4 {
+  position: absolute;
+  left: 80px;
+  top: 200px;
+  margin: 1rem 0 3rem;
+}
+.categories-right {
+  display: grid;
+  grid-template-areas: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+.category {
+  position: relative;
+  top: 70px;
+  left: 850px;
+  height: 50px;
+  width: 500px;
+  border-radius: 50px;
+  background: var(--color-primary);
+}
+.category:hover {
+  box-shadow:0 3rem 3rem rbga(0, 0, 0,0.3);
+}
+
+.category:nth-child(1) .category-icon {
+  background: var(--color-shadow);
+}
+
+.category:nth-child(2) .category-icon {
+  background: var(--color-shadow);
+}
+.category:nth-child(3) .category-icon {
+  background: var(--color-shadow);
+}
+.category:nth-child(4) .category-icon {
+  background: var(--color-shadow);
+}
+
+.category-icon {
+  position: absolute;
+  background: var(--color-primary);
+  left: 5px;
+  top: 5px;
+  padding: 0.7rem;
+  border-radius: 1rem;
+}
+
+.category h5 {
+  text-align: center;
+  margin: 0,5rem 0 1rem;
+} 
+
+.category p {
+  text-align: center;
+  font-size: 0,85rem;
+}
+/*=================================Categories satuan End======================*/
+/*=================================sevice section start===================*/
+.services .box-container{ 
+    position: relative;
+    display: grid;
+    width: 100%;
+    height: 450px;
+    background:#f0f8ff;
+    bottom: 375px;
+    grid-template-columns: 25% 25% 25% 25%;
+
+}
+
+.services .box-container .box{
+    position: relative;
+    background:var(--color-shadow);
+    border-radius: .2rem;
+    box-shadow: var(--box-shadow);
+    padding:2rem;
+    width: 200px;
+    height: 150px;
+    margin: 20px;
+    left: 50px;
+    border-radius: 20px;
+}
+
+.services .box-container .box i{
+    color:white;
+    font-size: 2rem;
+    padding-bottom: .2rem;
+}
+
+.services .box-container .box h3{
+    color: var(--color-black);
+    font-size: 1rem;
+    
+}
+
+.services .box-container .box p{
+  position: relative;
+    color:var(--color-primary);
+    font-size: 1.rem;
+    line-height: 2;
+    bottom: 10px;
+}
+.btnberita{
+    display: inline-block;
+    padding-left:1rem;
+    border:var(--color-black);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    color:white;
+    cursor: pointer;
+    font-size: 1rem;
+    background: #778899;
+    text-decoration: none;
+}
+
+.btnberita span{
+    padding:.7rem 1rem;
+    border-radius: .5rem;
+    background:var(--color-primary);
+    color:yellow;
+    margin-left: .5rem;
+}
+
+.btnberita:hover{
+    background:var(--color-primary);
+    color:gold;
+}
+
+.btnberita:hover span{
+    color:var(--color-primary);
+    background:yellow;
+    margin-left: 1rem;
+}
+
+/*===============================service section end======================*/
+/*=================================footers section start==================*/
+.footer123 .box-container{
+   min-height: 1000px;
+    position: relative;
+    display: grid;
+    width: 100%;
+    height: 69rem;
+    top:-37rem;
+    background:var(--color-black);
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.footer123 .box-container .box h3{
+    font-size: 1.2rem;
+    color:orange;
+    font-family:Times New Roman;
+    margin-left: 8rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.footer123 .box-container .box a{
+    display: block;
+    font-size: 1.rem;
+    color:var(--color-primary);
+    padding: .5rem;
+    text-decoration: none;
+    margin-left: 8rem;
+}
+
+.box a::after {
+    content: '';
+    background-color: #fff;
+    position: relative;
+    height: 2px;
+    transition: width .5s;
+}
+
+.footer123 .box-container .box a:hover {
+    color: rgb(255, 165, 0);
+}
+
+.footer123 .box-container .box a:hover::after {
+    width: 100%;
+    background-color:rgb(255, 165, 0);
+}
+
+.hero {
+  height: calc(100vh - 80px);
+  background-image: url(./bg.jpg);
+  background-position: center;
+}
+
+
+footer .credit{
+    position:relative;
+    bottom: 40rem;
+    background:var(--color-primary);
+    padding: 1rem;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 1rem;
+    color:orange;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+}
+
+footer .credit span{
+    color:var(--color-shadow);
+}
+
+/*==========================================footers section end ==============================*/
+
